@@ -11,15 +11,16 @@ Este proyecto implementa un sistema de gestión de torneos de eSports utilizando
 ## Diagramas UML 
 
 ### Diagrama de Casos de Uso 
-![Diagrama de casos de uso](diagrams/GestionDeEquiposYJugadores-useCase.png) 
+![Diagrama de casos de uso](diagrams/EEDD_CASOS_USO.png) 
 
 ### Diagrama de Clases 
-![Diagrama de clases](diagrams/clases.png) AQUI HAY QUE METER EL DE CLASES
+![Diagrama de clases](diagrams/EEDD_DIAGRAMA_CLASES.png) 
 
 ## Estructura del Proyecto
 
-torneo-esports-uml/ ├── src/ 
-│ ├── es/empresa/torneo/ #ESTO LO TENGO QUE CAMBIAR CUANDO AÑADA EL PROYECTO DE JAVA
+torneo-esports-uml/ 
+├── src/ 
+│ ├── es/empresa/torneo/ #ESTO LO TENGO QUE CAMBIAR CUANDO AÑADA EL PROYECTO DE JAVA //TERMIANR
 │ │ ├── modelo/ 
 │ │ ├── control/ 
 │ │ ├── vista/ 
@@ -36,10 +37,11 @@ torneo-esports-uml/ ├── src/
  `git clone https://github.com/KrissBlueMeth/TORNEO-ESPORTS-UML.git´
   
 2. Compilar y ejecutar el proyecto:
-`cd src javac es/empresa/torneo/Main.java java es.empresa.torneo.Main`
+`cd src javac es/empresa/torneo/Main.java java es.empresa.torneo.Main` //ESTO LO TENGO QUE TERMINAR
 
  ## Justificación del diseño 
- Un ADMIN accede a los casos de uso. Los casos de uso "Registrar equipo", "Añadir jugadores a un equipo" y "consultar lista de equipos y jugadores" los he contemplado como casos de usos independientes (se pueden utilizar de manera independiente, por ejemplo: puedo crear un equipo sin necesidad de añadir ningún jugador en ese momento al equipo. O puedo añadir jugadores sin meterlos obligatoriamente dentro de un equipo). He añadido un nuevo caso de uso: "Registrar Jugador" ya que me parecía importante para el correcto funcionamiento del proyecto. 
-En cuanto a las clases, serían 2: equipo y jugador. Ambas tienen metódos en común como "registrar nuevo equipo- registrar nuevo jugador"  # FALTA POR EXPLICAR CUANDO TENGA EL DIAGRAMA DE CASOS
+ Un ADMIN accede a los casos de uso. Los casos de uso "Registrar equipo", "Añadir jugadores a un equipo" y "consultar lista de equipos y jugadores" los he contemplado como casos de usos independientes (se pueden utilizar de manera independiente, por ejemplo: puedo crear un equipo sin necesidad de añadir ningún jugador en ese momento al equipo. O puedo añadir jugadores sin meterlos obligatoriamente dentro de un equipo). Registrar equipo incluye comprobar que el equipo NO exista ya. Y añadir jugadores a un equipo y consultar la lista de equipos y jugadores, incluyen comprobar que el equipo existe previamente, ya que si no existiera, no se podrían añadir los jugadores ni consultar la lista. He añadido un nuevo caso de uso: "Registrar Jugador" ya que me parecía importante para el correcto funcionamiento del proyecto, que incluye comprobar que ese jugador no exista previamente. (Para evitar que un mismo jugador se registre 2 veces)
+En cuanto a las clases, serían 2: equipo y jugador. Las interfaces son "JugadorDAo" y "EquipoDAo", que extienden de la interface "CrudGenerico". "jugadorDaoImplList" implementa a "JugadorDao" y "EquipoDAoImplList" implementa de "EquipoDao" La gestión de la app se hará con "GestionEquiposJugadores" y "GestionEquiposYJugadoresCLI" es la vista que permite que el usuario pueda interaccionar con la app.
  
  ## Conclusiones Sobre el aprendizaje obtenido.
+Lo que destaco es que, para realizar el UML correctamente hay que preguntarse "¿qué queremos hacer?" y ¿"cómo lo queremos hacer?" en cada paso, ya que en función de lo que queramos, se puede interpretar de una manera o de otra. Al principio puede resultar confuso debido a estas interpretaciones, por eso es bueno ir paso a paso concretando cada punto, con el objetivo de que la aplicación se comporte exactamente como necesitamos que lo haga. 
