@@ -18,26 +18,57 @@ Este proyecto implementa un sistema de gestión de torneos de eSports utilizando
 
 ## Estructura del Proyecto
 
-torneo-esports-uml/ 
-├── src/ 
-│ ├── es/empresa/torneo/ #ESTO LO TENGO QUE CAMBIAR CUANDO AÑADA EL PROYECTO DE JAVA //TERMIANR
-│ │ ├── modelo/ 
-│ │ ├── control/ 
-│ │ ├── vista/ 
-│ │ ├── Main.java 
+TORNEO-ESPORTS-UML/
+├── ENTORNOS_APP/
+│   ├── .settings/
+│   ├── bin/
+│   ├── src/
+│   │   ├── (default package)/
+│   │   │   └── Main.java
+│   │   ├── control/
+│   │   │   └── GestionEquiposYJugadores.java
+│   │   ├── entidades/
+│   │   │   ├── Equipo.java
+│   │   │   └── Jugador.java
+│   │   ├── negocio/
+│   │   │   ├── CrudGenerico.java
+│   │   │   ├── EquipoDao.java
+│   │   │   ├── EquipoDaoImplList.java
+│   │   │   ├── JugadorDao.java
+│   │   │   └── JugadorDaoImplList.java
+│   │   ├── test/
+│   │   │   └── MainTest.java
+│   │   └── vista/
+│   │       └── GestionEquiposYJugadoreCli.java
+│   ├── .classpath
+│   ├── .project
 ├── diagrams/
-│ ├── GestionDeEquiposYJugadores-useCase.png 
-│ ├── clases.png #ESTO LO TENGO QUE CAMBIAR CUANDO AÑADA EL DIAGRAMA CLASES
-├── README.md 
-├── .gitignore
-├── LICENSE (opcional) 
+│   ├── EEDD_CASOS_USP.png
+│   ├── EEDD_DIAGRAMA_CLASES.png
+├── README.md
+├── AD3_UML_ENUNCIADO.pdf
 
 ## Instalación y Ejecución 
 1. Clonar el repositorio:
  `git clone https://github.com/KrissBlueMeth/TORNEO-ESPORTS-UML.git´
   
-2. Compilar y ejecutar el proyecto:
-`cd src javac es/empresa/torneo/Main.java java es.empresa.torneo.Main` //ESTO LO TENGO QUE TERMINAR
+2. Importar el proyecto en Eclipse:
+   
+Abre Eclipse.
+
+Ve a File > Import....
+
+Selecciona General > Existing Projects into Workspace y haz clic en Next.
+
+En Select root directory, navega hasta la carpeta TORNEO-ESPORTS-UML/ENTORNOS_APP.
+
+Asegúrate de que el proyecto esté seleccionado en la lista y haz clic en Finish.
+
+3. Ejecutar la aplicación:
+   
+En el Package Explorer de Eclipse, abre el archivo Main.java (ubicado en el default package dentro de src).
+
+Haz clic derecho sobre Main.java y selecciona Run As > Java Application.
 
  ## Justificación del diseño 
  Un ADMIN accede a los casos de uso. Los casos de uso "Registrar equipo", "Añadir jugadores a un equipo" y "consultar lista de equipos y jugadores" los he contemplado como casos de usos independientes (se pueden utilizar de manera independiente, por ejemplo: puedo crear un equipo sin necesidad de añadir ningún jugador en ese momento al equipo. O puedo añadir jugadores sin meterlos obligatoriamente dentro de un equipo). Registrar equipo incluye comprobar que el equipo NO exista ya. Y añadir jugadores a un equipo y consultar la lista de equipos y jugadores, incluyen comprobar que el equipo existe previamente, ya que si no existiera, no se podrían añadir los jugadores ni consultar la lista. He añadido un nuevo caso de uso: "Registrar Jugador" ya que me parecía importante para el correcto funcionamiento del proyecto, que incluye comprobar que ese jugador no exista previamente. (Para evitar que un mismo jugador se registre 2 veces)
