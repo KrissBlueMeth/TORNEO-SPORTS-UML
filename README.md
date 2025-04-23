@@ -18,6 +18,7 @@ Este proyecto implementa un sistema de gestión de torneos de eSports utilizando
 
 ## Estructura del Proyecto
 
+```tree
 TORNEO-ESPORTS-UML/
 ├── ENTORNOS_APP/
 │   ├── .settings/
@@ -47,6 +48,7 @@ TORNEO-ESPORTS-UML/
 │   ├── EEDD_DIAGRAMA_CLASES.png
 ├── README.md
 ├── AD3_UML_ENUNCIADO.pdf
+```
 
 ## Instalación y Ejecución 
 1. Clonar el repositorio:
