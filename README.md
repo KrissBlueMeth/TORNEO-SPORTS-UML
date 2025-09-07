@@ -4,9 +4,9 @@ Cristina Salazar Guijarro
 KrissBlueMeth
 
 ## Descripción del Proyecto
-(https://github.com/KrissBlueMeth/TORNEO-ESPORTS-UML.git)
+(https://github.com/KrissBlueMeth/TORNEO-SPORTS-UML.git)
 
-Este proyecto implementa un sistema de gestión de torneos de eSports utilizando UML para el modelado y Java para la implementación. Forma parte de la actividad evaluable del tercer trimestre de la asignatura de Entornos de Desarrollo y he utilizado draw.io para realizar el diagrama de casos de uso y el de clases. Además he creado el proyecto en Java para poder comprobar si funcionaría correctamente. 
+Este proyecto implementa un sistema de gestión de torneos de Sports utilizando UML para el modelado y Java para la implementación. Forma parte de la actividad evaluable del tercer trimestre de la asignatura de Entornos de Desarrollo y he utilizado draw.io para realizar el diagrama de casos de uso y el de clases. Además he creado el proyecto en Java para poder comprobar si funcionaría correctamente. 
 
 ## Diagramas UML 
 
